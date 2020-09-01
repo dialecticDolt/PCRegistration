@@ -1,0 +1,95 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\willr\source\repos\PhaseCorrelation\PhaseCorrelation>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include"     --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g  -use_fast_math -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc142.pdb /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\willr\source\repos\PhaseCorrelation\PhaseCorrelation\kernel.cu" 
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1076): warning : variable "width" was declared but never referenced
+  
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1077): warning : variable "height" was declared but never referenced
+  
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1165): warning : variable "nBatch" was declared but never referenced
+  
+  kernel.cu
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(122): warning C4477: 'fprintf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'const char *'
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(122): warning C4313: 'fprintf': '%d' in format string conflicts with argument 1 of type 'const char *'
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(590): warning C4018: '<': signed/unsigned mismatch
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(595): warning C4018: '<': signed/unsigned mismatch
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(600): warning C4018: '<': signed/unsigned mismatch
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(677): warning C4018: '<': signed/unsigned mismatch
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(794): warning C4244: 'argument': conversion from 'double' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(928): warning C4477: 'printf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+  C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(928): note: consider using '%zi' in the format string
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1209): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1215): warning C4267: 'argument': conversion from 'size_t' to 'const unsigned int', possible loss of data
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1229): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1230): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(1231): warning C4244: 'argument': conversion from 'double' to 'unsigned int', possible loss of data
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\thrust/system/cuda/detail/extrema.h(325): warning C4244: 'initializing': conversion from 'Size' to 'thrust::detail::int32_t', possible loss of data
+          with
+          [
+              Size=IndexType
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\thrust/system/cuda/detail/extrema.h(397): note: see reference to function template instantiation 'T thrust::cuda_cub::__extrema::extrema<thrust::cuda_cub::tag,zip_iterator,IndexType,thrust::cuda_cub::__extrema::arg_max_f<float2,__int64,mag_comp>,T>(thrust::cuda_cub::execution_policy<thrust::cuda_cub::tag> &,InputIt,Size,BinaryOp,T *)' being compiled
+          with
+          [
+              T=T,
+              InputIt=zip_iterator,
+              Size=IndexType,
+              BinaryOp=thrust::cuda_cub::__extrema::arg_max_f<float2,__int64,mag_comp>
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\thrust/system/cuda/detail/extrema.h(466): note: see reference to function template instantiation 'ItemsIt thrust::cuda_cub::__extrema::element<thrust::cuda_cub::__extrema::arg_max_f,thrust::cuda_cub::tag,ItemsIt,BinaryPred>(thrust::cuda_cub::execution_policy<thrust::cuda_cub::tag> &,ItemsIt,ItemsIt,BinaryPred)' being compiled
+          with
+          [
+              ItemsIt=thrust::device_ptr<float2>,
+              BinaryPred=mag_comp
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\thrust/detail/extrema.inl(65): note: see reference to function template instantiation 'ItemsIt thrust::cuda_cub::max_element<thrust::cuda_cub::tag,ForwardIterator,BinaryPredicate>(thrust::cuda_cub::execution_policy<thrust::cuda_cub::tag> &,ItemsIt,ItemsIt,BinaryPred)' being compiled
+          with
+          [
+              ItemsIt=thrust::device_ptr<float2>,
+              ForwardIterator=thrust::device_ptr<float2>,
+              BinaryPredicate=mag_comp,
+              BinaryPred=mag_comp
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\thrust/detail/extrema.inl(139): note: see reference to function template instantiation 'ForwardIterator thrust::max_element<DerivedPolicy,ForwardIterator,BinaryPredicate>(const thrust::detail::execution_policy_base<DerivedPolicy> &,ForwardIterator,ForwardIterator,BinaryPredicate)' being compiled
+          with
+          [
+              ForwardIterator=thrust::device_ptr<float2>,
+              DerivedPolicy=thrust::cuda_cub::tag,
+              BinaryPredicate=mag_comp
+          ]
+  C:/Users/willr/source/repos/PhaseCorrelation/PhaseCorrelation/kernel.cu(666): note: see reference to function template instantiation 'ForwardIterator thrust::max_element<thrust::device_ptr<float2>,mag_comp>(ForwardIterator,ForwardIterator,BinaryPredicate)' being compiled
+          with
+          [
+              ForwardIterator=thrust::device_ptr<float2>,
+              BinaryPredicate=mag_comp
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\thrust/system/cuda/detail/extrema.h(354): warning C4244: 'initializing': conversion from 'Size' to 'thrust::detail::int32_t', possible loss of data
+          with
+          [
+              Size=IndexType
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\cub\agent\../grid/grid_even_share.cuh(133): warning C4244: '=': conversion from 'OffsetT' to 'int', possible loss of data
+          with
+          [
+              OffsetT=__int64
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\cub\agent\../grid/grid_even_share.cuh(128): note: while compiling class template member function 'void cub::GridEvenShare<__int64>::DispatchInit(OffsetT,int,int)'
+          with
+          [
+              OffsetT=__int64
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\thrust/system/cuda/detail/extrema.h(220): note: see reference to function template instantiation 'void cub::GridEvenShare<__int64>::DispatchInit(OffsetT,int,int)' being compiled
+          with
+          [
+              OffsetT=__int64
+          ]
+  C:\Users\willr\AppData\Local\Temp\tmpxft_000082d8_00000000-7_kernel.cudafe1.stub.c(98): note: see reference to class template instantiation 'cub::GridEvenShare<__int64>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include\cub\agent\../grid/grid_even_share.cuh(135): warning C4244: '=': conversion from 'OffsetT' to 'int', possible loss of data
+          with
+          [
+              OffsetT=__int64
+          ]
+  PhaseCorrelation.vcxproj -> C:\Users\willr\source\repos\PhaseCorrelation\x64\Debug\PhaseCorrelation.exe
